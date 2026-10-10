@@ -39,6 +39,7 @@ services:
       DB_DATABASE: ${POSTGRES_DB:-library}
       DB_USERNAME: ${POSTGRES_USER:-library}
       DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://${POSTGRES_USER:-library}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-library}}
       JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET en .env}
       ADMIN_USERNAME: ${ADMIN_USERNAME:?Define ADMIN_USERNAME en .env}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Define ADMIN_PASSWORD en .env}
